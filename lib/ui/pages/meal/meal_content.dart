@@ -23,12 +23,7 @@ class ZZMealContent extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 15,left: 15,right: 15),
             child: ListView.builder(
               itemBuilder: (ctx,index){
-                return GestureDetector(
-                  child: ZZMealCell(meals[index]),
-                  onTap: (){
-                    Navigator.of(context).pushNamed(ZZMealDetalScreen.routeName,arguments: meals[index]);
-                  },
-                );
+                return ZZMealCell(meals[index]);
               },
               itemCount: meals.length,
             ),
